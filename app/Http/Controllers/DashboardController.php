@@ -158,19 +158,17 @@ class DashboardController extends Controller
 
     }
 
-        public function banco(){
-
-            $dadosMundo = CovidMundo::all();
-            $dadosBrasil = CovidBrasil::all();
-            $dadosEstados = CovidEstados::all();
-            return view('banco',[
-                'dadosMundo' => $dadosMundo,
-                'dadosBrasil' => $dadosBrasil,
-                'dadosEstados' => $dadosEstados,
-                ]
-            );
-
-        }
+    public function banco(){
+        $dadosMundo = CovidMundo::all();
+        $dadosBrasil = CovidBrasil::all();
+        $dadosEstados = CovidEstados::all();
+        return view('banco',[
+            'dadosMundo' => $dadosMundo,
+            'dadosBrasil' => $dadosBrasil,
+            'dadosEstados' => $dadosEstados,
+            ]
+        );
+    }
 
 
     public function popular(){
@@ -196,6 +194,26 @@ class DashboardController extends Controller
             if(isset($covid['total'])){
                 $covidTotal = $covid['total'];
                 $covidBrasil = $covid['dates'][$date]['countries']['Brazil'];
+
+                 // Banco com dados do Mundo
+                if(CovidMundo::where(['data'=>$covidTotal['date']])->exists()){
+                    // banco atualizado
+                }else{
+                    // adicionar dado no banco
+                    CovidMundo::create(
+                        [
+                            'data' => $covidTotal['date'],
+                            'confirmado_total' => $covidTotal['today_confirmed'],
+                            'confirmado_hoje' => $covidTotal['today_new_confirmed'],
+                            'recuperado_total' => $covidTotal['today_recovered'],
+                            'recuperado_hoje' => $covidTotal['today_new_recovered'],
+                            'morte_total' => $covidTotal['today_deaths'],
+                            'morte_hoje' => $covidTotal['today_new_deaths'],
+                        ]
+                    );
+                }
+
+                // Banco com dados do Brasil
                 if(CovidBrasil::where(['data'=>$covidTotal['date']])->exists()){
                     // banco atualizado
                 }else{
@@ -211,6 +229,28 @@ class DashboardController extends Controller
                             'morte_hoje' => $covidBrasil['today_new_deaths'],
                         ]
                     );
+                }
+
+                // Banco com dados dos Estados Brasileiros
+                if(CovidEstados::where(['data'=>$covidTotal['date']])->exists()){
+                    // banco atualizado
+                }else{
+                    // adicionar dado no banco
+                    foreach($covid['dates'][$date]['countries']['Brazil']['regions'] as $estados){
+                        CovidEstados::create(
+                            [
+                                'data' => $covidTotal['date'],
+                                'estado_id' => $estados['id'],
+                                'estado_nome' => $estados['name'],
+                                'confirmado_total' => $estados['today_confirmed'],
+                                'confirmado_hoje' => $estados['today_new_confirmed'],
+                                'recuperado_total' => $estados['today_recovered'],
+                                'recuperado_hoje' => $estados['today_new_recovered'],
+                                'morte_total' => $estados['today_deaths'],
+                                'morte_hoje' => $estados['today_new_deaths'],
+                            ]
+                        );
+                    }
                 }
             }
         }

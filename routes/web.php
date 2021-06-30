@@ -22,7 +22,9 @@ use App\Http\Controllers\DashboardController;
 // Route::get('/home',['as'=>'home',   'uses'=>'DashboardController@dashboard']);
 // Route::get('/home','DashboardController@dashboard')->name('dashboard');
 Route::get('/', [DashboardController::class, 'dashboard']);
-Route::get('/banco', [DashboardController::class, 'banco']);
+Route::get('/banco', [DashboardController::class, 'banco'])->name('banco');
+Route::get('/popular', [DashboardController::class, 'popular']);
+Route::get('mes/{mes}-{ano}/',[DashboardController::class, 'mes'])->name('mes');
 Route::get('/consulta', function () {
     return view('consulta');
 });

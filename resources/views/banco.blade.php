@@ -66,7 +66,7 @@
                         <li class="scroll-to-section"><a href="/" class="active">Home</a></li>
                         <li class="scroll-to-section"><a href="/banco">Banco de dados</a></li>
                         <li class="scroll-to-section"><a href="/consulta">Consulta</a></li>
-                        <li class="scroll-to-section"></li>
+                        <li class="scroll-to-section"><div class="main-blue-button"><a href="/popular">Popular banco</a></div></li>
                     </ul>
                 </nav>
                 </div>

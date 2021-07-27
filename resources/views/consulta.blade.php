@@ -2,261 +2,247 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="shortcut icon" type="image/x-icon" href="https://img-premium.flaticon.com/png/512/3958/premium/3958282.png?token=exp=1624933263~hmac=93dd326334be6829e88ff5ed0f2b3f08" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-    <title>Covid19</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="./assets/css/fontawesome.css">
-    <link rel="stylesheet" href="./assets/css/templatemo-seo-dream.css">
-    <link rel="stylesheet" href="./assets/css/animated.css">
-    <link rel="stylesheet" href="./assets/css/owl.css">
-<!--
-
-    TemplateMo 563 SEO Dream
-
-    https://templatemo.com/tm-563-seo-dream
-
-    -->
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="shortcut icon" type="image/x-icon" href="/assets/images/coronavirus.png" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+        <title>Covid19</title>
+        <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./assets/css/fontawesome.css">
+        <link rel="stylesheet" href="./assets/css/templatemo-seo-dream.css">
+        <link rel="stylesheet" href="./assets/css/animated.css">
+        <link rel="stylesheet" href="./assets/css/owl.css">
+        <style>
+            .label{
+                font-weight: bold;
+                margin-top: 25px;
+                margin-bottom: 5px;
+            }
+            .submit{
+                display: inline-block;
+                background-color: #054F77;
+                font-size: 15px;
+                font-weight: 400;
+                color: #fff;
+                text-transform: capitalize;
+                padding: 12px 25px;
+                border-radius: 23px;
+                letter-spacing: 0.25px;
+                transition: all .3s;
+            }
+            select{
+                border-radius: 23px;
+                padding: 10px;
+                background-color: white;
+            }
+            select:focus{
+                outline: 0 none;
+            }
+            input{
+                border-radius: 23px;
+                padding: 10px;
+                border-color: gray;
+                border-width: 1px;
+            }
+            input:focus{
+                outline: 0 none;
+            }
+        </style>
     </head>
 
     <body>
-
-    <!-- ***** Preloader Start ***** -->
-    <div id="js-preloader" class="js-preloader">
-        <div class="preloader-inner">
-        <span class="dot"></span>
-        <div class="dots">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        </div>
-    </div>
-    <!-- ***** Preloader End ***** -->
-
-    <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                    <h4>COVID19 <img src="https://img-premium.flaticon.com/png/512/3958/premium/3958282.png?token=exp=1624933263~hmac=93dd326334be6829e88ff5ed0f2b3f08" alt=""></h4>
-                    </a>
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                        <li class="scroll-to-section"><a href="/" >Home</a></li>
-                        <li class="scroll-to-section"><a href="/banco">Banco de dados</a></li>
-                        <li class="scroll-to-section"><a href="/consulta" class="active">Consulta</a></li>
-                        <li class="scroll-to-section"></li>
-                    </ul>
-                </nav>
+        <div id="js-preloader" class="js-preloader">
+            <div class="preloader-inner">
+                <span class="dot"></span>
+                <div class="dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </div>
-    </header>
-    <!-- ***** Header Area End ***** -->
-
-    <div id="services" class="our-services section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                <div class="section-heading wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                    <h2>Consultas</h2>
+        <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                    <nav class="main-nav">
+                        <a href="index.html" class="logo">
+                        <h4>COVID19 <img src="/assets/images/coronavirus.png" alt=""></h4>
+                        </a>
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="/" >Home</a></li>
+                            <li class="scroll-to-section"><a href="/dashboard">Dashboard</a></li>
+                            <li class="scroll-to-section"><a href="/banco">Banco de dados</a></li>
+                            <li class="scroll-to-section"><a href="/relatorio" class="active">Relatórios</a></li>
+                            <li class="scroll-to-section"><div class="main-blue-button"><a href="/relatorio-gerados">Relatórios já gerados</a></div></li>
+                        </ul>
+                    </nav>
+                    </div>
                 </div>
+            </div>
+        </header>
+        <div id="services" class="our-services section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-3">
+                        <div class="section-heading wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                            <h2>Gerar relatório</h2>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-    </div>
-    <div id="features" class="features section">
-        <div class="container" style="text-align:center; color: #921a25">
-            <h5>Em breve!</h5>
-        </div>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-<!--
-    <div id="features" class="features section">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                <div class="features-content">
-                    <div class="row">
-                    <div class="col-lg-3">
-                        <div class="features-item first-feature wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">
-                        <div class="first-number number">
-                            <h6>01</h6>
+                <div class="col-lg-7" style="margin:auto; margin-bottom: 40px;">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 style="font-weight:bold; color: #921a25; margin: 15px; text-align: center;">Filtros</h5>
                         </div>
-                        <div class="icon"></div>
-                        <h4>Reach Out</h4>
-                        <div class="line-dec"></div>
-                        <p>This HTML5 template is based on Bootstrap 5 CSS. You are free to customize anything.</p>
+                        <div class="card-body">
+                            <form action="/relatorio" method="POST">
+                                {{ csrf_field() }}
+                                <div class="row" style="text-align:center">
+                                    <div class="col-lg-6">
+                                        <label class="label">Intervalo de datas</label>
+                                        <br>
+                                        <input type="text" required name="daterange" />
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label class="label">Fonte de dados</label>
+                                        <br>
+                                        <select required id="fonte" name="fonte">
+                                            <option value="brasil">Brasil</option>
+                                            <option value="estados">Estados brasileiros</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label class="label">Tipo de gráfico</label>
+                                        <br>
+                                        <select required id="grafico" name="grafico">
+                                            <option value="linha">Linha</option>
+                                            <option value="coluna">Coluna</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label class="label">Campos disponíveis</label>
+                                        <br>
+                                        <select required name="campos[]" id="campos" multiple>
+                                            <option value="casos_total">Casos total</option>
+                                            <option value="casos_diario">Casos diario</option>
+                                            <option value="recuperados_total">Recuperados total</option>
+                                            <option value="recuperados_diario">Recuperados diario</option>
+                                            <option value="mortes_total">Mortes total</option>
+                                            <option value="mortes_diario">Mortes diario</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label class="label">Estados</label>
+                                        <br>
+                                        <select required disabled name="estados" id="estados">
+                                            <option value="acre">Acre</option>
+                                            <option value="alagoas">Alagoas</option>
+                                            <option value="amapa">Amapá</option>
+                                            <option value="amazonas">Amazonas</option>
+                                            <option value="bahia">Bahia</option>
+                                            <option value="ceara">Ceará</option>
+                                            <option value="espirito_santo">Espírito Santo</option>
+                                            <option value="goias">Goiás</option>
+                                            <option value="maranhao">Maranhão</option>
+                                            <option value="mato_grosso">Mato Grosso</option>
+                                            <option value="mato_grosso_del_sur">Mato Grosso do sul</option>
+                                            <option value="minas_gerais">Minas Gerais</option>
+                                            <option value="para">Pará</option>
+                                            <option value="paraiba">Paraíba</option>
+                                            <option value="parana">Paraná</option>
+                                            <option value="pernambuco">Pernambuco</option>
+                                            <option value="piaui">Piauí</option>
+                                            <option value="rio_de_janeiro">Rio de Janeiro</option>
+                                            <option value="rio_grande_del_norte">Rio Grande do Norte</option>
+                                            <option value="rio_grande_del_sur">Rio Grande do Sul</option>
+                                            <option value="rondonia">Rondônia</option>
+                                            <option value="roraima">Roraima</option>
+                                            <option value="santa_catarina">Santa Catarina</option>
+                                            <option value="sao_paulo">São Paulo</option>
+                                            <option value="sergipe">Sergipe</option>
+                                            <option value="tocantins">Tocantins</option>
+                                            <option value="distrito_federal">Distrito Federal</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-12" style="text-align:center">
+                                        <br>
+                                        <br>
+                                        <input class="submit" type="submit" value="Gerar" >
+                                        <br>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
+                        <br>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="features-item second-feature wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
-                        <div class="second-number number">
-                            <h6>02</h6>
-                        </div>
-                        <div class="icon"></div>
-                        <h4>Develop a Strategy</h4>
-                        <div class="line-dec"></div>
-                        <p>Lorem ipsum dolor sit ameter consectetur adipiscing li elit sed do eiusmod.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="features-item first-feature wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-                        <div class="third-number number">
-                            <h6>03</h6>
-                        </div>
-                        <div class="icon"></div>
-                        <h4>Implementation</h4>
-                        <div class="line-dec"></div>
-                        <p>If this template is useful for your website, please consider to <a rel="nofollow" href="https://www.paypal.me/templatemo" target="_blank">support us</a> a little.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="features-item second-feature last-features-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
-                        <div class="fourth-number number">
-                            <h6>04</h6>
-                        </div>
-                        <div class="icon"></div>
-                        <h4>Analyze the result</h4>
-                        <div class="line-dec"></div>
-                        <p>Below circular progress bar animation supports those CSS values 10, 20, 30, till 100.</p>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
-                <div class="col-lg-12">
-                <div class="skills-content">
-                    <div class="row">
-                    <div class="col-lg-3">
-                        <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
-                        <div class="progress" data-percentage="80">
-                            <span class="progress-left">
-                            <span class="progress-bar"></span>
-                            </span>
-                            <span class="progress-right">
-                            <span class="progress-bar"></span>
-                            </span>
-                            <div class="progress-value">
-                            <div>
-                                80%<br>
-                                <span>HTML/CSS/JS</span>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                        <div class="progress" data-percentage="60">
-                            <span class="progress-left">
-                            <span class="progress-bar"></span>
-                            </span>
-                            <span class="progress-right">
-                            <span class="progress-bar"></span>
-                            </span>
-                            <div class="progress-value">
-                            <div>
-                                60%<br>
-                                <span>Wordpress</span>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-                        <div class="progress" data-percentage="90">
-                            <span class="progress-left">
-                            <span class="progress-bar"></span>
-                            </span>
-                            <span class="progress-right">
-                            <span class="progress-bar"></span>
-                            </span>
-                            <div class="progress-value">
-                            <div>
-                                90%<br>
-                                <span>Marketing</span>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="skill-item last-skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
-                        <div class="progress" data-percentage="70">
-                            <span class="progress-left">
-                            <span class="progress-bar"></span>
-                            </span>
-                            <span class="progress-right">
-                            <span class="progress-bar"></span>
-                            </span>
-                            <div class="progress-value">
-                            <div>
-                                70%<br>
-                                <span>Photoshop</span>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
                 </div>
             </div>
         </div>
-    </div> -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                <p>Desenvolvido por
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                    <p>Desenvolvido por
 
-                <br> <a rel="nofollow" href="" title="free CSS templates">Alayne e Rodrigo</a></p>
+                    <br> <a rel="nofollow" href="" title="free CSS templates">Alayne, Rodrigo e Juliana</a></p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    <!-- Scripts -->
-    <script src="./vendor/jquery/jquery.min.js"></script>
-    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/owl-carousel.js"></script>
-    <script src="./assets/js/animation.js"></script>
-    <script src="./assets/js/imagesloaded.js"></script>
-    <script src="./assets/js/custom.js"></script>
+        <!-- Scripts -->
+        <script src="./vendor/jquery/jquery.min.js"></script>
+        <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="./assets/js/owl-carousel.js"></script>
+        <script src="./assets/js/animation.js"></script>
+        <script src="./assets/js/imagesloaded.js"></script>
+        <script src="./assets/js/custom.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+        <script>
+            var date = new Date(-1);
+            $('input[name="daterange"]').daterangepicker({
+                maxDate: new Date(),
+                minDate: date,
+                locale: {
+                    format: 'DD/MM/YYYY'
+                }
+            });
+            var select = document.querySelector('select');
+            select.addEventListener('change', function () {
+                var selecionada = this.options[this.selectedIndex].value;
+                var estados = document.getElementById("estados");
+                if(selecionada == 'estados'){
+                    estados.disabled = false;
+                }else{
+                    estados.disabled = true;
+                }
+            });
+        </script>
 
     </body>
 </html>

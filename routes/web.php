@@ -21,13 +21,18 @@ use App\Http\Controllers\DashboardController;
 // });
 // Route::get('/home',['as'=>'home',   'uses'=>'DashboardController@dashboard']);
 // Route::get('/home','DashboardController@dashboard')->name('dashboard');
-Route::get('/', [DashboardController::class, 'dashboard']);
+Route::get('/', [DashboardController::class, 'welcome']);
 Route::get('/banco', [DashboardController::class, 'banco'])->name('banco');
 Route::get('/popular', [DashboardController::class, 'popular']);
 Route::get('mes/{mes}-{ano}/',[DashboardController::class, 'mes'])->name('mes');
-Route::get('/consulta', function () {
-    return view('consulta');
-});
+Route::post('/relatorio',[DashboardController::class, 'relatorioPost'])->name('relatorioPost');
+Route::get('/relatorio-gerados',[DashboardController::class, 'relatorioGerados'])->name('geradas');
+Route::get('/relatorio',[DashboardController::class, 'relatorioGet'])->name('relatorioGet');
+Route::get('/dashboard',[DashboardController::class, 'dashboard'])->name('dashboard');
+Route::post('/relatorio-update-{id}-{tipo}',[DashboardController::class, 'relatorioUpdate'])->name('relatorioUpdate');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// });
 
 
 // Route::post('/dashboard/weekly','DashboardController@mapsDate')->name('dashboardDate.weekly');
